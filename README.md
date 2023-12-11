@@ -11,7 +11,7 @@ this package generate pdf from a html template.
 ## Initialization
 
 Into your `**.service.ts` file import `createPdf()`.
-```
+```ts
 import { Injectable } from '@nestjs/common';
 import { createPdf } from '@leninlb/nestjs-html-to-pdf';
 import * as path from 'path';
@@ -21,7 +21,7 @@ Tha function expect 3 parameters **createPdf([filePath], [options], [data])**
 
 - `filePath` <[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type)> It's **required**, HTML file path.
 - `options?` <[PDFOptions](https://pptr.dev/api/puppeteer.pdfoptions)> It's **optional**, Defaul value:
-```
+```js
 {
     format: 'a4',
     printBackground: true,
@@ -437,7 +437,7 @@ res.end(buffer);
 }
 ```
 Result
-![image](https://user-images.githubusercontent.com/26281994/207532590-f4f7a0db-a620-4912-8137-3803cf748c66.png)
+![image](https://raw.githubusercontent.com/leninplts/nestjs-html-to-pdf/main/templates/generated-pdf.png)
 
 ## Usage with custom data
 
